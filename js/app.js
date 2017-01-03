@@ -20,4 +20,9 @@ app.controller("repoController", ['$scope','repoSearch',function ($scope,repoSea
     });
   }
 
+  $scope.sortColum = [{name:'Name',val: 'name'},{name:'Date',val: 'created_at'}];
+  $scope.selectedItem;
+    $scope.dropdownSort = function (item) {
+        $scope.selectedItem = item;
+    }
 }]);
