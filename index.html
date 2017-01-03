@@ -11,7 +11,13 @@
     <div class="panel-heading">Search Repos - By David Martín</div>
     <div class="panel-body">
       <p>List your repos with AngularJS</p>
+      <!-- <h2>User</h2> - <img class="img-circle img-responsive" ng-src="{{repos[0].owner.avatar_url}}" alt="avatar"> -->
     </div>
+    <form class="" ng-submit="setUser()">
+      <label>User Repo</label>
+      <input type="text" ng-model="userGithub" value="">
+      <button type="submit" name="button">List</button>
+    </form>
     <!-- Table -->
     <table class="table">
       <thead>
@@ -21,7 +27,7 @@
         <th>SH</th>
       </thead>
       <tbody>
-        <tr  ng-repeat="repo in repos">
+        <tr ng-repeat="repo in repos">
           <td>{{repo.id}}</td>
           <td>{{repo.name}}</td>
           <td>{{repo.owner.login}}</td>
